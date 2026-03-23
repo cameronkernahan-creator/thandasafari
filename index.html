@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanda Safari x Forbes Global Properties South Africa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #F5EDE0;
+  --cream: #FAF6F0;
+  --gold: #B8965A;
+  --gold-light: #D4B27A;
+  --olive: #6B7346;
+  --olive-dark: #4A5132;
+  --earth: #3D3229;
+  --charcoal: #1A1614;
+  --deep: #0D0B09;
+  --warm-white: #F8F4EE;
+  --forbes-red: #B01B2E;
+  --text-light: rgba(255,255,255,.88);
+  --text-muted: rgba(255,255,255,.55);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--deep);
+  color: var(--text-light);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── SLIDE SYSTEM ── */
+.slide {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 8%;
+  overflow: hidden;
+}
+
+.slide-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── TOP RULE ── */
+.top-rule {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold) 30%, transparent 100%);
+}
+
+/* ── TYPOGRAPHY ── */
+.display {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.display-xl { font-size: clamp(48px, 8vw, 120px); }
+.display-lg { font-size: clamp(36px, 5vw, 72px); }
+.display-md { font-size: clamp(28px, 3.5vw, 52px); }
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.body-text {
+  font-weight: 300;
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.75;
+  color: rgba(255,255,255,.72);
+  max-width: 620px;
+}
+
+.gold { color: var(--gold); }
+.italic { font-style: italic; }
+
+/* ── PAGE NUMBER ── */
+.pn {
+  position: absolute;
+  bottom: 28px;
+  left: 8%;
+  font-size: 9px;
+  letter-spacing: .15em;
+  opacity: .32;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 56px;
+  height: 1px;
+  background: var(--gold);
+  margin: 32px 0;
+  opacity: .6;
+}
+
+/* ── REVEAL ANIMATION ── */
+.r {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .9s cubic-bezier(.25,.46,.45,.94), transform .9s cubic-bezier(.25,.46,.45,.94);
+}
+.r.v { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .12s; }
+.d2 { transition-delay: .24s; }
+.d3 { transition-delay: .36s; }
+.d4 { transition-delay: .48s; }
+.d5 { transition-delay: .6s; }
+
+/* ── GRAIN OVERLAY ── */
+.grain {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 1 — COVER
+   ══════════════════════════════════════ */
+#cover {
+  background: var(--deep);
+  justify-content: flex-end;
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+#cover .bg-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: .35;
+  filter: saturate(.7);
+}
+
+#cover .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, var(--deep) 0%, rgba(13,11,9,.4) 40%, rgba(13,11,9,.2) 100%);
+}
+
+.cover-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.cover-logos .logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: .8;
+}
+
+.cover-logos .logo-sep {
+  width: 1px;
+  height: 32px;
+  background: var(--gold);
+  opacity: .4;
+}
+
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(42px, 7vw, 100px);
+  line-height: .98;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.cover-sub {
+  font-weight: 200;
+  font-size: clamp(14px, 1.4vw, 19px);
+  color: rgba(255,255,255,.5);
+  letter-spacing: .06em;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.cover-date {
+  position: absolute;
+  bottom: 28px;
+  right: 8%;
+  font-size: 9px;
+  letter-spacing: .2em;
+  color: rgba(255,255,255,.3);
+  font-weight: 300;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 2 — CONTEXT
+   ══════════════════════════════════════ */
+#context {
+  background: var(--cream);
+  color: var(--earth);
+}
+
+#context .body-text { color: rgba(61,50,41,.65); }
+#context .eyebrow { color: var(--olive); }
+#context .pn { color: var(--earth); }
+
+.context-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.context-right {
+  position: relative;
+}
+
+.context-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.stat-card {
+  padding: 28px 0;
+  border-top: 1px solid rgba(61,50,41,.12);
+}
+
+.stat-card .stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 42px;
+  color: var(--earth);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-card .stat-label {
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(61,50,41,.45);
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 3 — FORBES OVERVIEW
+   ══════════════════════════════════════ */
+#forbes {
+  background: var(--charcoal);
+}
+
+.forbes-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.metric-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 48px;
+}
+
+.metric-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.metric-item .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(36px, 4vw, 60px);
+  color: var(--gold);
+  line-height: 1;
+  min-width: 180px;
+}
+
+.metric-item .desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.forbes-quote {
+  padding: 48px;
+  background: rgba(184,150,90,.06);
+  border-left: 2px solid var(--gold);
+  margin-top: 24px;
+}
+
+.forbes-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(20px, 2vw, 28px);
+  font-style: italic;
+  line-height: 1.5;
+  color: rgba(255,255,255,.8);
+}
+
+.forbes-quote .attrib {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 4 — EDITORIAL POWER
+   ══════════════════════════════════════ */
+#editorial {
+  background: var(--deep);
+}
+
+.editorial-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 56px;
+}
+
+.edit-card {
+  padding: 40px 32px;
+  border: 1px solid rgba(184,150,90,.15);
+  position: relative;
+  transition: border-color .4s ease;
+}
+
+.edit-card:hover {
+  border-color: rgba(184,150,90,.35);
+}
+
+.edit-card .card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: .25;
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  line-height: 1;
+}
+
+.edit-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.edit-card p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.55);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 5 — THE OPPORTUNITY
+   ══════════════════════════════════════ */
+#opportunity {
+  background: var(--cream);
+  color: var(--earth);
+}
+
+#opportunity .body-text { color: rgba(61,50,41,.65); }
+#opportunity .eyebrow { color: var(--olive); }
+#opportunity .pn { color: var(--earth); }
+
+.opp-hero {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(32px, 4.5vw, 64px);
+  line-height: 1.1;
+  color: var(--earth);
+  margin-bottom: 32px;
+}
+
+.opp-hero .highlight {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.opp-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 56px;
+}
+
+.pillar {
+  padding-top: 24px;
+  border-top: 2px solid var(--gold);
+}
+
+.pillar h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--earth);
+  margin-bottom: 12px;
+}
+
+.pillar p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(61,50,41,.6);
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 6 — STRATEGY
+   ══════════════════════════════════════ */
+#strategy {
+  background: var(--charcoal);
+}
+
+.strategy-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.phase-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.phase {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.phase-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.phase h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: .02em;
+}
+
+.phase p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 7 — YOUR TEAM
+   ══════════════════════════════════════ */
+#team {
+  background: var(--deep);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 56px;
+}
+
+.team-card {
+  padding: 48px 40px;
+  border: 1px solid rgba(184,150,90,.12);
+  position: relative;
+}
+
+.team-card .role-tag {
+  font-size: 9px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.team-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(26px, 2.5vw, 36px);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.team-card p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+}
+
+.team-card .credentials {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-card .cred-item {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,.4);
+  padding-left: 16px;
+  position: relative;
+}
+
+.team-card .cred-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 8 — NEXT STEPS
+   ══════════════════════════════════════ */
+#next {
+  background: var(--cream);
+  color: var(--earth);
+}
+
+#next .eyebrow { color: var(--olive); }
+#next .pn { color: var(--earth); }
+
+.next-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step-item {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(61,50,41,.1);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.step-item .step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--gold);
+}
+
+.step-item h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--earth);
+  margin-bottom: 4px;
+}
+
+.step-item p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(61,50,41,.55);
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 9 — CLOSE
+   ══════════════════════════════════════ */
+#close {
+  background: var(--deep);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#close .slide-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(36px, 6vw, 80px);
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.close-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 48px;
+}
+
+.close-contacts {
+  display: flex;
+  gap: 64px;
+  margin-top: 16px;
+}
+
+.contact-block {
+  text-align: center;
+}
+
+.contact-block .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.contact-block .title {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.contact-block .email {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.4);
+}
+
+.close-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  font-weight: 300;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .context-grid,
+  .forbes-grid,
+  .strategy-layout,
+  .team-grid,
+  .next-layout { grid-template-columns: 1fr; gap: 40px; }
+  .editorial-columns,
+  .opp-pillars { grid-template-columns: 1fr; gap: 24px; }
+  .close-contacts { flex-direction: column; gap: 32px; }
+  .metric-item { flex-direction: column; gap: 8px; }
+  .metric-item .num { min-width: auto; }
+  .context-stat-row { grid-template-columns: 1fr; }
+}
+
+/* ── PRINT ── */
+@media print {
+  .slide { page-break-after: always; min-height: 100vh; }
+  .r { opacity: 1 !important; transform: none !important; }
+  .grain { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 1 — COVER
+     ════════════════════════════════════════════ -->
+<section class="slide" id="cover">
+  <img class="bg-img" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&q=80" alt="African savanna sunset">
+  <div class="overlay"></div>
+  <div class="slide-inner" style="z-index:2;">
+    <div class="cover-logos r">
+      <span class="logo-text">Forbes Global Properties</span>
+      <span class="logo-sep"></span>
+      <span class="logo-text">South Africa</span>
+    </div>
+    <h1 class="cover-title r d1">Thanda Safari<br><span class="gold italic">Global Reach</span></h1>
+    <div class="divider r d2"></div>
+    <p class="cover-sub r d3">An introduction to how Forbes Global Properties South Africa will position Thanda's luxury villa collection for the international market.</p>
+  </div>
+  <span class="cover-date">March 2026 &nbsp;|&nbsp; Confidential</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 2 — WHY WE ARE HERE
+     ════════════════════════════════════════════ -->
+<section class="slide" id="context">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <div class="context-grid">
+      <div>
+        <p class="eyebrow r">Why We Are Here</p>
+        <h2 class="display display-md r d1" style="color:var(--earth); margin-bottom: 24px;">Thanda deserves a global stage.</h2>
+        <div class="divider r d2" style="background:var(--olive);"></div>
+        <p class="body-text r d3">Thanda Safari Private Game Reserve is one of Africa's most extraordinary luxury hospitality properties. With 44 private villas set across 16,500 hectares of pristine Zululand wilderness, you have created something that transcends real estate and enters the realm of legacy.</p>
+        <p class="body-text r d4" style="margin-top: 16px;">We are here to understand your vision, your requirements, and your ambitions for reaching the international buyer. This is the beginning of a conversation about how Forbes Global Properties South Africa can deliver what no other brokerage in this market can: global editorial reach, a brand synonymous with wealth and prestige, and a marketing strategy built for the ultra-high-net-worth individual.</p>
+      </div>
+      <div class="context-right">
+        <div class="context-stat-row r d3">
+          <div class="stat-card">
+            <div class="stat-num">44</div>
+            <div class="stat-label">Private Villas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">$4M+</div>
+            <div class="stat-label">Per Villa</div>
+          </div>
+        </div>
+        <div class="context-stat-row r d4">
+          <div class="stat-card">
+            <div class="stat-num">16,500</div>
+            <div class="stat-label">Hectares</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">Big 5</div>
+            <div class="stat-label">Wildlife Reserve</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pn">02</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 3 — FORBES GLOBAL PROPERTIES
+     ════════════════════════════════════════════ -->
+<section class="slide" id="forbes">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <div class="forbes-grid">
+      <div>
+        <p class="eyebrow r">The Forbes Advantage</p>
+        <h2 class="display display-md r d1" style="margin-bottom: 24px;">The world's most powerful<br>luxury real estate network.</h2>
+        <div class="divider r d2"></div>
+        <p class="body-text r d3">Forbes Global Properties is an invitation-only network of the world's leading luxury real estate brokerages. As the exclusive South African member, we bring the full power of the Forbes ecosystem to every property we represent.</p>
+        <div class="metric-stack r d4">
+          <div class="metric-item">
+            <span class="num">167M+</span>
+            <span class="desc">Monthly unique visitors to Forbes.com, exceeding Zillow and Realtor.com combined.</span>
+          </div>
+          <div class="metric-item">
+            <span class="num">79.9%</span>
+            <span class="desc">Global share of voice in luxury real estate media. No competitor comes close.</span>
+          </div>
+          <div class="metric-item">
+            <span class="num">43%</span>
+            <span class="desc">Of Forbes Global Properties clients appear on the Forbes 400 list.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="forbes-quote r d3">
+          <p>Every property listed with Forbes Global Properties gains access to an editorial team, a dedicated PR firm, and distribution across the most trusted luxury media platform on earth.</p>
+          <div class="attrib">Forbes Global Properties Member Network</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pn">03</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 4 — EDITORIAL & MARKETING POWER
+     ════════════════════════════════════════════ -->
+<section class="slide" id="editorial">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <p class="eyebrow r">What We Deliver</p>
+    <h2 class="display display-md r d1" style="margin-bottom: 16px;">Editorial storytelling at a<br><span class="gold italic">global scale.</span></h2>
+    <p class="body-text r d2" style="margin-bottom: 0;">Through our Forbes membership, Thanda gains access to a complete marketing infrastructure designed for the international ultra-high-net-worth buyer.</p>
+    <div class="editorial-columns">
+      <div class="edit-card r d2">
+        <span class="card-num">01</span>
+        <h3>Forbes Editorial Team</h3>
+        <p>Dedicated editors and scriptwriters craft bespoke long-form narratives for Forbes.com. Not advertisements. Not advertorials. Genuine editorial storytelling that positions Thanda as a legacy investment, not just a property listing.</p>
+      </div>
+      <div class="edit-card r d3">
+        <span class="card-num">02</span>
+        <h3>Global PR Distribution</h3>
+        <p>A New York-based PR firm pitches Thanda's story to publications including Architectural Digest, Financial Times, Robb Report, and the world's leading luxury media. Press releases are drafted and distributed to a targeted international audience.</p>
+      </div>
+      <div class="edit-card r d4">
+        <span class="card-num">03</span>
+        <h3>Cinematic Production</h3>
+        <p>Our in-house production capability delivers cinema-grade property films, aerial cinematography, and lifestyle content designed for the Forbes platform and international syndication. We do not outsource. We produce.</p>
+      </div>
+    </div>
+  </div>
+  <span class="pn">04</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 5 — THE OPPORTUNITY
+     ════════════════════════════════════════════ -->
+<section class="slide" id="opportunity">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <p class="eyebrow r">The Opportunity</p>
+    <h2 class="opp-hero r d1">An exclusive release strategy<br>for a <span class="highlight">once-in-a-generation</span><br>collection.</h2>
+    <div class="divider r d2" style="background:var(--olive);"></div>
+    <p class="body-text r d3" style="color:rgba(61,50,41,.65);">Rather than flooding the market with 44 villas at once, we propose a curated, phased approach. Scarcity drives desire. Each release becomes an event, a story, a moment of international attention that compounds the value of every villa that follows.</p>
+    <div class="opp-pillars">
+      <div class="pillar r d3">
+        <h4>Curated Scarcity</h4>
+        <p>Release a limited number of villas per phase, creating urgency and exclusivity. Each tranche is positioned as a rare opportunity with its own editorial campaign.</p>
+      </div>
+      <div class="pillar r d4">
+        <h4>International Targeting</h4>
+        <p>Forbes.com reaches high-net-worth individuals across 43 global editions. We target buyers in the US, UK, Europe, Middle East, and Asia who are actively seeking trophy assets in emerging luxury markets.</p>
+      </div>
+      <div class="pillar r d5">
+        <h4>Narrative-Led Sales</h4>
+        <p>Each villa release is anchored by a compelling editorial narrative. Thanda is not selling real estate. Thanda is offering a share of one of Africa's last great wilderness reserves.</p>
+      </div>
+    </div>
+  </div>
+  <span class="pn" style="color:var(--earth);">05</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 6 — STRATEGY FRAMEWORK
+     ════════════════════════════════════════════ -->
+<section class="slide" id="strategy">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <div class="strategy-layout">
+      <div>
+        <p class="eyebrow r">Our Approach</p>
+        <h2 class="display display-md r d1" style="margin-bottom: 24px;">From briefing to<br><span class="gold italic">global launch.</span></h2>
+        <div class="divider r d2"></div>
+        <p class="body-text r d3">Our process is designed to capture the essence of Thanda, translate it into a story the international market cannot ignore, and deliver it through the most powerful luxury media platform available.</p>
+      </div>
+      <div>
+        <div class="phase-stack">
+          <div class="phase r d1">
+            <span class="phase-num">1</span>
+            <div>
+              <h4>Discovery & Briefing</h4>
+              <p>On-site immersion at Thanda. Understand the property, the brand, the buyer profile, and the competitive positioning. Capture the story firsthand.</p>
+            </div>
+          </div>
+          <div class="phase r d2">
+            <span class="phase-num">2</span>
+            <div>
+              <h4>Editorial Development</h4>
+              <p>Our Forbes editors craft the narrative. Scriptwriters develop the storytelling framework. Visual identity for the campaign is established.</p>
+            </div>
+          </div>
+          <div class="phase r d3">
+            <span class="phase-num">3</span>
+            <div>
+              <h4>Cinematic Production</h4>
+              <p>On-location film production. Aerial cinematography. Lifestyle content. Property walkthroughs. All produced at cinema grade for Forbes.com and international distribution.</p>
+            </div>
+          </div>
+          <div class="phase r d4">
+            <span class="phase-num">4</span>
+            <div>
+              <h4>Global Distribution</h4>
+              <p>Forbes.com editorial placement. PR distribution to tier-one luxury publications. Magazine features. Social syndication. Targeted digital campaigns reaching UHNW buyers globally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pn">06</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 7 — YOUR TEAM
+     ════════════════════════════════════════════ -->
+<section class="slide" id="team">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <p class="eyebrow r">Your Team</p>
+    <h2 class="display display-md r d1" style="margin-bottom: 16px;">Dedicated principals.<br>Not a call centre.</h2>
+    <p class="body-text r d2">When you work with Forbes Global Properties South Africa, you work directly with the people who own the business and personally deliver the results.</p>
+    <div class="team-grid">
+      <div class="team-card r d3">
+        <div class="role-tag">CEO &amp; Principal Broker</div>
+        <h3>Keegan Steyn</h3>
+        <p>Keegan is the exclusive Forbes Global Properties member for South Africa. He brings deep experience in luxury real estate, direct relationships with high-net-worth investors, and the strategic vision to position Thanda at the top of the international luxury market.</p>
+        <div class="credentials">
+          <span class="cred-item">Forbes Global Properties South Africa, Founder</span>
+          <span class="cred-item">Luxury property specialist, Cape Town and KwaZulu-Natal</span>
+          <span class="cred-item">Direct access to Forbes editorial, PR, and marketing teams</span>
+        </div>
+      </div>
+      <div class="team-card r d4">
+        <div class="role-tag">Marketing Director &amp; Head of Production</div>
+        <h3>Cameron Kernahan</h3>
+        <p>Cameron leads all marketing strategy, content production, and brand storytelling for Forbes Global Properties South Africa. A filmmaker and creative strategist with a portfolio spanning luxury hospitality brands across Africa, Europe, and the Middle East.</p>
+        <div class="credentials">
+          <span class="cred-item">Cinematic production for luxury hospitality and real estate</span>
+          <span class="cred-item">Brand strategy and content systems architecture</span>
+          <span class="cred-item">International production experience across 3 continents</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pn">07</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 8 — NEXT STEPS
+     ════════════════════════════════════════════ -->
+<section class="slide" id="next">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <div class="next-layout">
+      <div>
+        <p class="eyebrow r">Next Steps</p>
+        <h2 class="display display-md r d1" style="color:var(--earth); margin-bottom: 24px;">Friday is the<br>beginning.</h2>
+        <div class="divider r d2" style="background:var(--olive);"></div>
+        <p class="body-text r d3" style="color:rgba(61,50,41,.65);">Our meeting is designed to gather the information we need to build a comprehensive proposal tailored specifically to Thanda. We want to understand your goals, your timeline, your priorities, and how you see the international market opportunity.</p>
+        <p class="body-text r d4" style="color:rgba(61,50,41,.65); margin-top: 16px;">Following our visit, we will consolidate everything into a full marketing and distribution proposal for your review.</p>
+      </div>
+      <div>
+        <div class="steps-list">
+          <div class="step-item r d2">
+            <div class="step-num">1</div>
+            <div>
+              <h4>On-Site Discovery</h4>
+              <p>Immerse in the property. Walk the villas. Understand the brand, the history, and the unique selling points that will anchor the international narrative.</p>
+            </div>
+          </div>
+          <div class="step-item r d3">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Requirements Gathering</h4>
+              <p>Understand your target markets, pricing strategy, release preferences, and any existing international relationships or exclusivity arrangements.</p>
+            </div>
+          </div>
+          <div class="step-item r d4">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Tailored Proposal</h4>
+              <p>We deliver a comprehensive marketing and distribution strategy within two weeks, built specifically around what we learn on Friday.</p>
+            </div>
+          </div>
+          <div class="step-item r d5">
+            <div class="step-num">4</div>
+            <div>
+              <h4>Campaign Launch</h4>
+              <p>Upon approval, we activate the Forbes editorial machine, begin cinematic production planning, and prepare the first villa release for global distribution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pn" style="color:var(--earth);">08</span>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 9 — CLOSE
+     ════════════════════════════════════════════ -->
+<section class="slide" id="close">
+  <div class="top-rule"></div>
+  <div class="slide-inner">
+    <p class="eyebrow r" style="text-align:center;">Forbes Global Properties South Africa</p>
+    <h2 class="close-title r d1">Let's tell<br><span class="gold italic">Thanda's story</span><br>to the world.</h2>
+    <p class="close-sub r d2">We look forward to visiting the reserve, understanding your vision, and showing you what a Forbes-powered global marketing strategy can achieve.</p>
+    <div class="divider r d3" style="margin: 0 auto 40px;"></div>
+    <div class="close-contacts r d4">
+      <div class="contact-block">
+        <div class="name">Keegan Steyn</div>
+        <div class="title">CEO &amp; Principal Broker</div>
+        <div class="email">keegan@southafricafgp.com</div>
+      </div>
+      <div class="contact-block">
+        <div class="name">Cameron Kernahan</div>
+        <div class="title">Marketing Director</div>
+        <div class="email">cameron@southafricafgp.com</div>
+      </div>
+    </div>
+  </div>
+  <div class="close-footer">South Africa &nbsp;|&nbsp; Forbes Global Properties</div>
+</section>
+
+<script>
+// Intersection Observer for reveal animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('v');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.r').forEach(el => observer.observe(el));
+
+// Trigger cover animations immediately
+setTimeout(() => {
+  document.querySelectorAll('#cover .r').forEach(el => el.classList.add('v'));
+}, 200);
+</script>
+
+</body>
+</html>
