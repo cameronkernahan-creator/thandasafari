@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,37 +19,37 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 
 .slide { min-height: 100vh; width: 100%; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 80px 8%; overflow: hidden; }
 .slide-inner { max-width: 1200px; width: 100%; margin: 0 auto; position: relative; z-index: 2; }
-.top-rule { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--gold) 30%, transparent 100%); }
-.display { font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
+.top-rule { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(–gold) 30%, transparent 100%); }
+.display { font-family: ‘Cormorant Garamond’, serif; font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
 .display-md { font-size: clamp(28px, 3.5vw, 52px); }
-.eyebrow { font-size: 10px; font-weight: 500; letter-spacing: .38em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.eyebrow { font-size: 10px; font-weight: 500; letter-spacing: .38em; text-transform: uppercase; color: var(–gold); margin-bottom: 20px; }
 .body-text { font-weight: 300; font-size: clamp(15px, 1.3vw, 18px); line-height: 1.75; color: rgba(255,255,255,.72); max-width: 620px; }
-.gold { color: var(--gold); }
+.gold { color: var(–gold); }
 .italic { font-style: italic; }
 .pn { position: absolute; bottom: 28px; left: 8%; font-size: 9px; letter-spacing: .15em; opacity: .32; font-weight: 300; color: #fff; }
-.divider { width: 56px; height: 1px; background: var(--gold); margin: 32px 0; opacity: .6; }
+.divider { width: 56px; height: 1px; background: var(–gold); margin: 32px 0; opacity: .6; }
 .source-note { font-size: 10px; color: rgba(255,255,255,.25); font-weight: 300; margin-top: 24px; font-style: italic; }
 .r { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.25,.46,.45,.94), transform .9s cubic-bezier(.25,.46,.45,.94); }
 .r.v { opacity: 1; transform: translateY(0); }
 .d1 { transition-delay: .12s; } .d2 { transition-delay: .24s; } .d3 { transition-delay: .36s; } .d4 { transition-delay: .48s; } .d5 { transition-delay: .6s; }
-.grain { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 200px; }
+.grain { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; opacity: .035; background-image: url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘n’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=’.85’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23n)’/%3E%3C/svg%3E”); background-size: 200px; }
 
 /* Cover */
-#cover { background: var(--deep); justify-content: flex-end; padding-bottom: 60px; }
+#cover { background: var(–deep); justify-content: flex-end; padding-bottom: 60px; }
 #cover .bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35; filter: saturate(.7); }
-#cover .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, var(--deep) 0%, rgba(13,11,9,.4) 40%, rgba(13,11,9,.2) 100%); }
+#cover .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, var(–deep) 0%, rgba(13,11,9,.4) 40%, rgba(13,11,9,.2) 100%); }
 .cover-logos { display: flex; align-items: center; gap: 24px; margin-bottom: 48px; }
-.cover-logos .logo-text { font-weight: 300; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); opacity: .8; }
-.cover-logos .logo-sep { width: 1px; height: 32px; background: var(--gold); opacity: .4; }
-.cover-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(42px, 7vw, 100px); line-height: .98; letter-spacing: -0.03em; color: #fff; margin-bottom: 24px; }
+.cover-logos .logo-text { font-weight: 300; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(–gold); opacity: .8; }
+.cover-logos .logo-sep { width: 1px; height: 32px; background: var(–gold); opacity: .4; }
+.cover-title { font-family: ‘Cormorant Garamond’, serif; font-weight: 300; font-size: clamp(42px, 7vw, 100px); line-height: .98; letter-spacing: -0.03em; color: #fff; margin-bottom: 24px; }
 .cover-sub { font-weight: 200; font-size: clamp(14px, 1.4vw, 19px); color: rgba(255,255,255,.5); letter-spacing: .06em; max-width: 500px; line-height: 1.7; }
 .cover-date { position: absolute; bottom: 28px; right: 8%; font-size: 9px; letter-spacing: .2em; color: rgba(255,255,255,.3); font-weight: 300; }
 
 /* Cream slides */
-.cream-slide { background: var(--cream); color: var(--earth); }
+.cream-slide { background: var(–cream); color: var(–earth); }
 .cream-slide .body-text { color: rgba(61,50,41,.65); }
-.cream-slide .eyebrow { color: var(--olive); }
-.cream-slide .pn { color: var(--earth); }
+.cream-slide .eyebrow { color: var(–olive); }
+.cream-slide .pn { color: var(–earth); }
 
 /* Grids */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
@@ -58,19 +59,19 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 /* Team */
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 40px; }
 .team-card { padding: 40px 36px; border: 1px solid rgba(184,150,90,.12); }
-.team-card .role-tag { font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 12px; }
-.team-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 28px; color: #fff; margin-bottom: 16px; }
+.team-card .role-tag { font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: var(–gold); font-weight: 500; margin-bottom: 12px; }
+.team-card h3 { font-family: ‘Cormorant Garamond’, serif; font-weight: 400; font-size: 28px; color: #fff; margin-bottom: 16px; }
 .team-card p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.55); line-height: 1.7; }
 
 /* Stats */
 .stat-card { padding: 28px 0; border-top: 1px solid rgba(61,50,41,.12); }
-.stat-card .stat-num { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 42px; color: var(--earth); line-height: 1; margin-bottom: 6px; }
+.stat-card .stat-num { font-family: ‘Cormorant Garamond’, serif; font-weight: 400; font-size: 42px; color: var(–earth); line-height: 1; margin-bottom: 6px; }
 .stat-card .stat-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(61,50,41,.45); }
 .context-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
 
 /* Why stats */
 .why-stat { padding: 24px 0; border-top: 1px solid rgba(184,150,90,.2); text-align: center; }
-.why-stat .ws-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+.why-stat .ws-num { font-family: ‘Cormorant Garamond’, serif; font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; color: var(–gold); line-height: 1; margin-bottom: 6px; }
 .why-stat .ws-label { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); }
 
 /* Donut */
@@ -78,82 +79,84 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 .donut-wrap { position: relative; width: 260px; height: 260px; margin: 0 auto; }
 .donut-wrap svg { width: 100%; height: 100%; }
 .donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
-.donut-center .dc-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; color: var(--gold); line-height: 1; }
+.donut-center .dc-num { font-family: ‘Cormorant Garamond’, serif; font-size: 48px; font-weight: 400; color: var(–gold); line-height: 1; }
 .donut-center .dc-label { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 4px; }
 .comp-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
 .comp-name { font-size: 11px; font-weight: 300; color: rgba(255,255,255,.5); min-width: 160px; }
 .comp-pct { font-size: 11px; font-weight: 400; color: rgba(255,255,255,.6); min-width: 40px; text-align: right; }
 .comp-bar-wrap { flex: 1; height: 5px; background: rgba(255,255,255,.06); border-radius: 3px; }
-.comp-bar { height: 100%; border-radius: 3px; background: var(--gold); opacity: .6; }
+.comp-bar { height: 100%; border-radius: 3px; background: var(–gold); opacity: .6; }
 
 /* Audience */
 .aud-card { padding: 32px 24px; background: rgba(184,150,90,.04); border: 1px solid rgba(184,150,90,.1); text-align: center; }
-.aud-card .aud-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 400; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+.aud-card .aud-num { font-family: ‘Cormorant Garamond’, serif; font-size: 44px; font-weight: 400; color: var(–gold); line-height: 1; margin-bottom: 10px; }
 .aud-card .aud-label { font-size: 12px; font-weight: 300; color: rgba(255,255,255,.55); line-height: 1.5; }
 
 /* Consideration cards */
-.consider-card { padding: 36px 28px; border-left: 2px solid var(--gold); background: rgba(184,150,90,.04); }
-.consider-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: #fff; margin-bottom: 10px; }
+.consider-card { padding: 36px 28px; border-left: 2px solid var(–gold); background: rgba(184,150,90,.04); }
+.consider-card h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 400; color: #fff; margin-bottom: 10px; }
 .consider-card p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.65; }
 
 /* Edit cards */
 .edit-card { padding: 36px 28px; border: 1px solid rgba(184,150,90,.15); position: relative; }
-.edit-card .card-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--gold); opacity: .25; position: absolute; top: 16px; right: 24px; line-height: 1; }
-.edit-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 22px; margin-bottom: 12px; color: #fff; }
+.edit-card .card-num { font-family: ‘Cormorant Garamond’, serif; font-size: 48px; font-weight: 300; color: var(–gold); opacity: .25; position: absolute; top: 16px; right: 24px; line-height: 1; }
+.edit-card h3 { font-family: ‘Cormorant Garamond’, serif; font-weight: 400; font-size: 22px; margin-bottom: 12px; color: #fff; }
 .edit-card p { font-weight: 300; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.55); }
 
 /* Services */
 .svc-card { padding: 28px 20px; border: 1px solid rgba(61,50,41,.1); }
-.svc-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--earth); margin-bottom: 8px; }
+.svc-card h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 500; color: var(–earth); margin-bottom: 8px; }
 .svc-card p { font-size: 12px; font-weight: 300; color: rgba(61,50,41,.55); line-height: 1.6; }
 
 /* Pillars */
-.pillar { padding-top: 24px; border-top: 2px solid var(--gold); }
-.pillar h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--earth); margin-bottom: 10px; }
+.pillar { padding-top: 24px; border-top: 2px solid var(–gold); }
+.pillar h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 500; color: var(–earth); margin-bottom: 10px; }
 .pillar p { font-size: 13px; font-weight: 300; color: rgba(61,50,41,.6); line-height: 1.7; }
 
 /* Strategy phases */
 .phase { padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.08); display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start; }
-.phase-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--gold); line-height: 1; }
+.phase-num { font-family: ‘Cormorant Garamond’, serif; font-size: 36px; font-weight: 300; color: var(–gold); line-height: 1; }
 .phase h4 { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 6px; }
 .phase p { font-size: 12px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.6; }
 
 /* Discovery questions */
 .q-item { padding: 24px 0; border-bottom: 1px solid rgba(61,50,41,.1); }
-.q-item h4 { font-size: 15px; font-weight: 500; color: var(--earth); margin-bottom: 4px; }
+.q-item h4 { font-size: 15px; font-weight: 500; color: var(–earth); margin-bottom: 4px; }
 .q-item p { font-size: 13px; font-weight: 300; color: rgba(61,50,41,.5); line-height: 1.5; }
 
 /* Next steps */
 .step-item { padding: 24px 0; border-bottom: 1px solid rgba(61,50,41,.1); display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
-.step-item .step-num { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--gold); }
-.step-item h4 { font-size: 14px; font-weight: 500; color: var(--earth); margin-bottom: 3px; }
+.step-item .step-num { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(–gold); display: flex; align-items: center; justify-content: center; font-family: ‘Cormorant Garamond’, serif; font-size: 14px; color: var(–gold); }
+.step-item h4 { font-size: 14px; font-weight: 500; color: var(–earth); margin-bottom: 3px; }
 .step-item p { font-size: 12px; font-weight: 300; color: rgba(61,50,41,.55); line-height: 1.5; }
 
 /* Close */
 #close { text-align: center; align-items: center; }
 #close .slide-inner { display: flex; flex-direction: column; align-items: center; }
-.close-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 6vw, 80px); line-height: 1.05; color: #fff; margin-bottom: 32px; }
+.close-title { font-family: ‘Cormorant Garamond’, serif; font-weight: 300; font-size: clamp(36px, 6vw, 80px); line-height: 1.05; color: #fff; margin-bottom: 32px; }
 .close-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 480px; margin-bottom: 48px; }
 .close-contacts { display: flex; gap: 64px; margin-top: 16px; }
 .contact-block { text-align: center; }
-.contact-block .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: #fff; margin-bottom: 4px; }
-.contact-block .title { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 8px; }
+.contact-block .name { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 400; color: #fff; margin-bottom: 4px; }
+.contact-block .title { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(–gold); font-weight: 400; margin-bottom: 8px; }
 .contact-block .email { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.4); }
 .close-footer { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-size: 9px; letter-spacing: .25em; text-transform: uppercase; color: rgba(255,255,255,.2); font-weight: 300; }
 
 @media (max-width: 900px) {
-  .two-col, .sov-layout, .team-grid { grid-template-columns: 1fr; gap: 40px; }
-  .three-col, .four-col { grid-template-columns: 1fr; gap: 24px; }
-  .close-contacts { flex-direction: column; gap: 32px; }
-  .context-stat-row { grid-template-columns: 1fr; }
+.two-col, .sov-layout, .team-grid { grid-template-columns: 1fr; gap: 40px; }
+.three-col, .four-col { grid-template-columns: 1fr; gap: 24px; }
+.close-contacts { flex-direction: column; gap: 32px; }
+.context-stat-row { grid-template-columns: 1fr; }
 }
 @media print { .slide { page-break-after: always; } .r { opacity: 1 !important; transform: none !important; } .grain { display: none; } }
 </style>
+
 </head>
 <body>
 <div class="grain"></div>
 
 <!-- ═══ 1. COVER ═══ -->
+
 <section class="slide" id="cover">
   <img class="bg-img" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&q=80" alt="African savanna sunset">
   <div class="overlay"></div>
@@ -167,6 +170,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 2. FRAME THE MEETING ═══ -->
+
 <section class="slide" id="frame" style="background:var(--charcoal);">
   <div class="top-rule"></div>
   <div class="slide-inner" style="max-width:800px; text-align:center;">
@@ -179,6 +183,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 3. WHO WE ARE ═══ -->
+
 <section class="slide" id="team" style="background:var(--deep);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -201,6 +206,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 4. THE FORBES PLATFORM ═══ -->
+
 <section class="slide" id="forbes" style="background:var(--charcoal);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -238,6 +244,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 5. WHAT WE UNDERSTAND ABOUT YOU ═══ -->
+
 <section class="slide cream-slide" id="understand">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -264,6 +271,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 6. THE OBJECTIVE & CONSIDERATIONS ═══ -->
+
 <section class="slide" id="objective" style="background:var(--deep);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -296,6 +304,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 9. OUR EDGE ═══ -->
+
 <section class="slide" id="edge" style="background:var(--deep);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -324,6 +333,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 10. MARKETING CAPABILITIES ═══ -->
+
 <section class="slide cream-slide" id="services">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -343,6 +353,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 11. PROPOSED THINKING ═══ -->
+
 <section class="slide" id="proposed" style="background:var(--charcoal);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -382,6 +393,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ 12. WHAT WE'D LIKE TO UNDERSTAND ═══ -->
+
 <section class="slide cream-slide" id="discovery">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -396,7 +408,8 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
         <div class="q-item r d2"><h4>How have previous villas been sold?</h4><p>Understanding what has worked so far helps us build on proven channels rather than starting from scratch.</p></div>
         <div class="q-item r d3"><h4>What does the customer journey look like?</h4><p>From first enquiry to signed deal, how does a buyer currently move through the process?</p></div>
         <div class="q-item r d4"><h4>Where have things fallen short with previous vendors?</h4><p>Understanding what has not worked is just as valuable as knowing what has.</p></div>
-        <div class="q-item r d5"><h4>If we could create anything for you, what would it be?</h4><p>Forget budget for a moment. What assets, content, or campaigns would you want to see from us?</p></div>
+        <div class="q-item r d5"><h4>How did you arrive at the pricing for the villas?</h4><p>We would love to understand the thinking behind the price positioning and how it sits relative to comparable properties in the market.</p></div>
+        <div class="q-item r d5"><h4>How many villas would you like to sell in the next 12 months?</h4><p>This helps us shape the phasing, the intensity of the campaign, and the resources we allocate from day one.</p></div>
       </div>
     </div>
   </div>
@@ -404,6 +417,7 @@ body { font-family: 'Outfit', sans-serif; background: var(--deep); color: var(--
 </section>
 
 <!-- ═══ CLOSE ═══ -->
+
 <section class="slide" id="close" style="background:var(--deep);">
   <div class="top-rule"></div>
   <div class="slide-inner">
@@ -426,5 +440,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.r').forEach(el => observer.observe(el));
 setTimeout(() => { document.querySelectorAll('#cover .r').forEach(el => el.classList.add('v')); }, 200);
 </script>
+
 </body>
 </html>
