@@ -140,8 +140,8 @@ body { background:var(--rich-black); color:var(--white); overflow-x:hidden; }
 
 /* ‚îÄ‚îÄ‚îÄ STAT ROW ‚îÄ‚îÄ‚îÄ */
 .stat-row {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 0; max-width: 780px; margin: 36px 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0; max-width: 880px; margin: 36px 0;
 }
 .stat-cell {
   padding: 28px 24px 28px 0;
@@ -308,7 +308,15 @@ body { background:var(--rich-black); color:var(--white); overflow-x:hidden; }
   <div class="cover-kicker reveal reveal-delay-1" style="display:none;">South Africa | Forbes Global Properties</div>
   <h1 class="reveal reveal-delay-1">Thanda<br>Royal Residence<br><em>Sales Action Plan</em></h1>
   <div class="cover-sub reveal reveal-delay-2">A campaign to bring Africa&rsquo;s most exclusive private safari estate to the world.</div>
-  <div class="cover-meta-grid reveal reveal-delay-3" style="margin-top:40px;">
+  <div class="reveal reveal-delay-3" style="margin-top:36px; max-width:500px;">
+    <div style="font-family:var(--sans); font-weight:600; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--champagne); margin-bottom:10px; opacity:0.6;">In This Deck</div>
+    <div style="font-family:var(--sans); font-weight:300; font-size:14px; line-height:1.7; color:var(--cream);">
+      &bull;&ensp;How we would like to position the marketing<br>
+      &bull;&ensp;Our strategy<br>
+      &bull;&ensp;Cost element
+    </div>
+  </div>
+  <div class="cover-meta-grid reveal reveal-delay-4" style="margin-top:40px;">
     <div class="cover-meta-item"><div class="cover-meta-label">Prepared For</div><div class="cover-meta-val">Pierre Delvaux</div></div>
     <div class="cover-meta-item"><div class="cover-meta-label">Prepared By</div><div class="cover-meta-val">Keegan Steyn &amp; Cameron Kernahan</div></div>
     <div class="cover-meta-item"><div class="cover-meta-label">Date</div><div class="cover-meta-val">8 April 2026</div></div>
@@ -341,7 +349,7 @@ body { background:var(--rich-black); color:var(--white); overflow-x:hidden; }
     </div>
     <div class="stat-cell">
       <div class="stat-label">Price Range</div>
-      <div class="stat-big light" style="font-size:clamp(22px,3vw,36px);">~$6M&ndash;~$10M</div>
+      <div class="stat-big light" style="font-size:clamp(22px,3vw,36px);">~$5.5M&ndash;~$10.5M</div>
       <div class="stat-desc light">USD per Residence<br>including VAT</div>
     </div>
   </div>
@@ -395,8 +403,8 @@ body { background:var(--rich-black); color:var(--white); overflow-x:hidden; }
         <div class="lbl no-mt">Editorial Strategy</div>
         <div class="lbl-rule light"></div>
         <div class="item-list">
+          <div class="item light">Editorial team interviews Pierre directly and crafts the narrative</div>
           <div class="item light">Forbes.com feature article, subject to editorial approval</div>
-          <div class="item light">Editorial team interviews Pierre directly</div>
           <div class="item light">Full listing on ForbesGlobalProperties.com</div>
           <div class="item light">Inclusion in Forbes lifestyle publication Story, Life and Style</div>
         </div>
@@ -554,21 +562,26 @@ body { background:var(--rich-black); color:var(--white); overflow-x:hidden; }
     <div class="chapter-title">Success <em>Metrics</em></div>
   </div>
 
-  <div class="stat-row reveal reveal-delay-1" style="max-width:660px;">
+  <div class="stat-row reveal reveal-delay-1" style="max-width:880px;">
     <div class="stat-cell" style="border-color:rgba(205,170,139,0.15);">
       <div class="stat-label">Site Visits</div>
-      <div class="stat-big dark">5</div>
-      <div class="stat-desc dark">Qualified prospects at Thanda</div>
+      <div class="stat-big dark">10</div>
+      <div class="stat-desc dark">Qualified prospects<br>within 6 months</div>
     </div>
     <div class="stat-cell" style="border-color:rgba(205,170,139,0.15);">
-      <div class="stat-label">Concluded Deal</div>
-      <div class="stat-big dark">1</div>
-      <div class="stat-desc dark">Minimum one Sale Agreement</div>
+      <div class="stat-label">Concluded Deals</div>
+      <div class="stat-big dark">2</div>
+      <div class="stat-desc dark">Sale Agreements<br>within 6 months</div>
     </div>
     <div class="stat-cell" style="border-color:rgba(205,170,139,0.15);">
-      <div class="stat-label">Campaign Window</div>
+      <div class="stat-label">Initial Window</div>
       <div class="stat-big dark">3</div>
-      <div class="stat-desc dark">Months: May to August 2026</div>
+      <div class="stat-desc dark">Month active campaign<br>May &ndash; August 2026</div>
+    </div>
+    <div class="stat-cell" style="border-color:rgba(205,170,139,0.15);">
+      <div class="stat-label">Extended Outlook</div>
+      <div class="stat-big dark">6</div>
+      <div class="stat-desc dark">Months total<br>for pipeline conversion</div>
     </div>
   </div>
 </section>
